@@ -36,7 +36,9 @@ public class User {
      * @param avatarImgUrl
      * @param recentlyLanded
      */
-    public User(Integer id, String phone, String userName, String password, String gender, String tureName, String birthday, String email, String personBrief, String avatarImgUrl, String recentlyLanded) {
+    public User(Integer id, String phone, String userName, String password,
+                String gender, String tureName, String birthday, String email,
+                String personBrief, String avatarImgUrl, String recentlyLanded) {
         this.id = id;
         this.phone = phone;
         this.userName = userName;

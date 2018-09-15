@@ -47,7 +47,11 @@ public class Article {
      * @param lastArticleId
      * @param nextArticleId
      */
-    public Article(Integer id, Integer articleId, String author, String originalAuthor, String articleTitle, String articleContent, String articleTags, String articleType, String articleCategories, String publishDate, String updateDate, String articleUrl, String articleTabloid, String likes, String lastArticleId, String nextArticleId) {
+    public Article(Integer id, Integer articleId, String author,
+                   String originalAuthor, String articleTitle, String articleContent,
+                   String articleTags, String articleType, String articleCategories, String publishDate,
+                   String updateDate, String articleUrl, String articleTabloid, String likes,
+                   String lastArticleId, String nextArticleId) {
         this.id = id;
         this.articleId = articleId;
         this.author = author;

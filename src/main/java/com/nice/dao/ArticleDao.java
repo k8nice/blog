@@ -5,7 +5,7 @@ import com.nice.entity.Article;
 /**
  * @author nice
  */
-public interface UserDao {
+public interface ArticleDao {
 
     Article addArticle(Article article);
 
