@@ -2,11 +2,15 @@ package com.nice.entity;
 
 import org.springframework.context.annotation.Bean;
 
+import java.io.Serializable;
+
 /**
  * 文章实体类
  * @author nice
  */
-public class Article {
+public class Article implements Serializable {
+
+    private static final long serialVersionUID  = 1L;
 
     private Integer id;                 //主键，自增
     private Integer articleId;          //文章id
@@ -21,9 +25,9 @@ public class Article {
     private String  updateDate;         //更新文章日期
     private String  articleUrl;         //文章url
     private String  articleTabloid;     //文章摘要
-    private String  likes;              //文章喜欢数
-    private String  lastArticleId;      //上一篇文章id
-    private String  nextArticleId;      //下一篇文章id
+    private Integer  likes;              //文章喜欢数
+    private Integer  lastArticleId;      //上一篇文章id
+    private Integer  nextArticleId;      //下一篇文章id
 
     public Article() {
     }
@@ -50,8 +54,8 @@ public class Article {
     public Article(Integer id, Integer articleId, String author,
                    String originalAuthor, String articleTitle, String articleContent,
                    String articleTags, String articleType, String articleCategories, String publishDate,
-                   String updateDate, String articleUrl, String articleTabloid, String likes,
-                   String lastArticleId, String nextArticleId) {
+                   String updateDate, String articleUrl, String articleTabloid, Integer likes,
+                   Integer lastArticleId, Integer nextArticleId) {
         this.id = id;
         this.articleId = articleId;
         this.author = author;
@@ -199,32 +203,32 @@ public class Article {
     }
 
     @Bean
-    public String getLikes() {
+    public Integer getLikes() {
         return likes;
     }
 
     @Bean
-    public void setLikes(String likes) {
+    public void setLikes(Integer likes) {
         this.likes = likes;
     }
 
     @Bean
-    public String getLastArticleId() {
+    public Integer getLastArticleId() {
         return lastArticleId;
     }
 
     @Bean
-    public void setLastArticleId(String lastArticleId) {
+    public void setLastArticleId(Integer lastArticleId) {
         this.lastArticleId = lastArticleId;
     }
 
     @Bean
-    public String getNextArticleId() {
+    public Integer getNextArticleId() {
         return nextArticleId;
     }
 
     @Bean
-    public void setNextArticleId(String nextArticleId) {
+    public void setNextArticleId(Integer nextArticleId) {
         this.nextArticleId = nextArticleId;
     }
 }
