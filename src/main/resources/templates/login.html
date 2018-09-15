@@ -11,9 +11,19 @@
             margin-left: 50%;
         }
         .textBox{
+            width: 300px;
+            height: 300px;
             position: absolute;
             margin-top: 500px;
             margin-left: 50%;
+            border-width: 1px;
+            border-style: solid;
+        }
+        .textBox > input{
+            height: 20px;
+        }
+        li{
+            list-style: none;
         }
     </style>
     <title>后台登陆页面</title>
@@ -21,9 +31,11 @@
 <body>
     <img class="picture1" src="http://localhost:9090/picture/blog.jpg"/>
     <form method="post" action="/login/login">
-        <ul class="textBox">
-        <input  name="userName" type="text"><br>
-        <input name="password" type="password">
+        <ul class="textBox"><br><br><br>
+        <li>账号</li>
+        <input  name="userName" type="text" class="text1"><br><br><br>
+        <li>密码</li>
+        <input name="password" type="password" class="text2"><br>
         <input value="登陆" type="submit">
         </ul>
     </form>

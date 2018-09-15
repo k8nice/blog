@@ -9,6 +9,9 @@ import org.springframework.core.env.Environment;
 
 import javax.sql.DataSource;
 
+/**
+ * @author nice
+ */
 @ComponentScan
 @Configuration
 public class ApplicationConfig {
