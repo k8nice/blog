@@ -10,6 +10,11 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface ArticleMapper {
 
+    /**
+     * 添加文章功能
+     * @param article
+     * @return
+     */
     @Insert("        INSERT into `ARTICLE`(`ID`,`ARTICLEID`,`AUTHOR`,`ORIGINALAUTHOR`,`ARTICLETITLE`,`ARTICLECONTENT`,`ARTICLETAGS`,\n" +
             "        `ARTICLETYPE`,`ARTICLECATEGORIES`,`PUBLISHDATE`,`UPDATEDATE`,`ARTICLEURL`,`ARTICLETABLOID`,`LIKES`" +
             "        ,`LASTARTICLEID`,`NEXTARTICLEID`) VALUES(#{id},#{articleId},#{author},#{originalAuthor},#{articleTitle},#{articleContent},#{articleTags},#{articleType},\n" +

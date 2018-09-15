@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
+/**
+ * @author nice
+ */
 @Controller
 @RequestMapping("/login")
 public class LoginController {
@@ -14,6 +17,12 @@ public class LoginController {
         return "login";
     }
 
+    /**
+     * 接收登陆验证信息
+     * @param userName
+     * @param password
+     * @return
+     */
     @PostMapping("/login")
     @ResponseBody
     public Map login(@RequestParam("userName") String userName, @RequestParam("password") String password){
